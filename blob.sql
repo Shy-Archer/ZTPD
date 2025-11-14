@@ -57,7 +57,7 @@ begin
 
 end;
 
+--14--
 select id, DBMS_LOB.GETLENGTH(cover) as filesize from movies where id in (65,66);
-
+--15--
 drop table movies;
-drop table TEMP_COVERS;
