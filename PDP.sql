@@ -14,7 +14,7 @@ create index figura_idx
 on figury(ksztalt)
 INDEXTYPE IS MDSYS.SPATIAL_INDEX_V2;
 --D--
---Wynik nie odpowiada rzeczywistoúci z tπ wspÛ≥rzÍdnπ powiπzany jest tylko kwadrat. Jest to spowodowane wykonaniem tylko pierwszej fazy przetwarzania.
+--Wynik nie odpowiada rzeczywisto≈ìci z ta wsp√≥erzedna powiazany jest tylko kwadrat. Jest to spowodowane wykonaniem tylko pierwszej fazy przetwarzania.
 select ID
 from FIGURY
 where SDO_FILTER(KSZTALT,
@@ -22,7 +22,7 @@ SDO_GEOMETRY(2001,null,
  SDO_POINT_TYPE(3,3,null),
  null,null)) = 'TRUE';
  --E--
- --Wynik odpowiada rzeczywistoúci
+ --Wynik odpowiada rzeczywisto≈ìci
 select ID
 from FIGURY
 where SDO_RELATE(KSZTALT,
@@ -135,5 +135,6 @@ where SDO_RELATE(C.GEOM, B.GEOM,
     'mask=ANYINTERACT') = 'TRUE'
     AND B.CNTRY_NAME = 'Poland'
 GROUP BY C."NAME";
+
 
 
